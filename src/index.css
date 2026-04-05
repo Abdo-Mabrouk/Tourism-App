@@ -1,0 +1,165 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-brand: #F7941D;
+  --color-brand-blue: #163A96;
+}
+ @utility container {
+    margin-inline: auto !important;
+    width: 90%;
+}
+body {
+    text-transform: capitalize;
+    background: white;
+}
+
+@layer components {
+    .btn1 {
+        @apply px-5 py-2 hover:bg-brand-blue hover:text-white border border-brand-blue transition-colors duration-300 text-brand-blue font-semibold text-base rounded-4xl  cursor-pointer;
+    }
+    .btn2 {
+        @apply px-12 py-2 hover:bg-brand bg-brand text-white transition-colors duration-300  font-semibold text-base rounded-4xl  cursor-pointer;
+    }
+    .form-control {
+        @apply px-4 py-4 rounded-xl text-black font-medium placeholder:text-[#A5A5A5] text-[16px] border border-[#EEEEEE] hover:border-brand-blue focus:outline-4  focus:outline-brand-blue/30  w-full;
+    }
+    .form-labole {
+        @apply text-[#333333] font-medium text-[16px] block;
+    }
+}
+.MultiSelectMenu::-webkit-scrollbar{
+  width: 5px !important;
+  height: 5px !important;
+  }
+  .MultiSelectMenu::-webkit-scrollbar-track{
+  background-color: transparent;
+  }
+  .MultiSelectMenu::-webkit-scrollbar-thumb{
+      background-color: #F7941D;
+      border-radius: 5px;
+      height: 2px !important;
+      cursor: pointer;
+      transition: all 0.5s ease;
+  } 
+  .MultiSelectMenu::-webkit-scrollbar-thumb:hover {
+    background: #015483; 
+      transition: all 0.5s ease;
+  } 
+  .no-scrollbar {
+    scrollbar-width: none;      
+    -ms-overflow-style: none;   
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;            
+  }
+.swiper-pagination-bullet {
+  background-color: #d1d5db !important; /* gray-300 */
+  opacity: 1 !important;
+  width: 11px !important;
+  height: 11px !important;
+  z-index: 100 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #F7951D !important; /* sky-500 */
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mySwiper .swiper-pagination-bullet {
+  background-color: #d1d5db !important; /* gray-300 */
+  opacity: 1 !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+.mySwiper .swiper-pagination-bullet-active {
+  background-color: #F7951D !important; /* sky-500 */
+  width: 32px !important;
+  height: 16px !important;
+  border-radius: 8px !important;
+
+}
+
+.swiper-button-prev,.swiper-button-next{
+  width: 44px!important;
+  height: 44px!important;
+  background-color: #060606cc;
+  border-radius: 50%;
+}
+.swiper-button-prev svg,.swiper-button-next svg{
+  width: 15px!important;
+  height: 15px!important;
+  color: white;
+}
+.swiper-button-prev:hover ,.swiper-button-next:hover {
+  background-color: #163A96;
+}
+
+
+
+.image-gallery-slide img {
+  border-radius: 16px;
+  height: 420px;
+  width: 100% !important;
+}
+.image-gallery-thumbnail .image-gallery-thumbnail-inner {
+    width: 64px;
+    height: 64px;
+    overflow: hidden;
+}
+.image-gallery-thumbnail + .image-gallery-thumbnail {
+    margin-left: 8px !important;
+    width: fit-content;
+    border-radius: 8px;
+    opacity: 0.5;
+}
+.image-gallery-slide {
+  border-radius: 8px !important;
+}
+.image-gallery-slide .image-gallery-image {
+    width: 100%;
+    object-fit: cover !important; 
+}
+.image-gallery-thumbnail.active, .image-gallery-thumbnail:focus {
+    outline: none;
+    border: 2px solid #163A96 !important;
+    width: fit-content !important;
+    border-radius: 10px;
+    opacity: 1;
+
+}
+.image-gallery-thumbnail img {
+  height: 64px !important;
+  width: 64p !important;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.image-gallery-slide {
+    margin-bottom: 8px !important;
+}
+
+.fullscreen {
+  width: 80% !important;
+  margin: 200px auto !important;
+}
+
+
+
