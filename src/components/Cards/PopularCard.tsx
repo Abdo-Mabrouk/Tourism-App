@@ -3,7 +3,7 @@ import icon3 from "@/assets/icon/location2.svg";
 import icon4 from "@/assets/icon/clock.svg";
 import PropertySwiper from "../Layout Components/PropertySwiper";
 import CountdownTimer from "../Layout Components/CountdownTimer";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Heart } from "lucide-react";
 import { useState } from "react";
 
