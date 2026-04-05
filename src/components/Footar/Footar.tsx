@@ -1,7 +1,7 @@
 import logo from "@/assets/icon/logofooter.svg";
 import icon1 from "@/assets/icon/youtube.svg";
 import icon2 from "@/assets/icon/twitter-x.svg";
-import icon3 from "@/assets/icon/Linkedin.svg";
+import icon3 from "@/assets/icon/linkedin.svg";
 import icon4 from "@/assets/icon/facebook.svg";
 import icon5 from "@/assets/icon/snapchat-fill.svg";
 import icon6 from "@/assets/icon/discount-shape.svg";
@@ -111,16 +111,14 @@ function Footar() {
                 Sunpyramids NavLinks{" "}
               </p>
               <div className="flex flex-col gap-3">
-                <NavLink to={""}>
+                <NavLink to={"/"}>
                   <p className="font-normal w-fit text-base text-[#FFFFFF] relative hover:text-brand transition-all duration-300 after:absolute after:-bottom-1 after:transition-all after:duration-300 hover:after:h-0.5 after:w-full after:start-0 after:bg-brand ">
                     Home
                   </p>
                 </NavLink>
-                <NavLink to={""}>
                   <p className="font-normal w-fit text-base text-[#FFFFFF] relative hover:text-brand transition-all duration-300 after:absolute after:-bottom-1 after:transition-all after:duration-300 hover:after:h-0.5 after:w-full after:start-0 after:bg-brand ">
                     Egypt Tours
                   </p>
-                </NavLink>
                 <NavLink to={""}>
                   <p className="font-normal flex items-center gap-2 w-fit text-base text-[#FFFFFF] relative hover:text-brand transition-all duration-300 after:absolute after:-bottom-1 after:transition-all after:duration-300 hover:after:h-0.5 after:w-full after:start-0 after:bg-brand ">
                     Special offer{" "}
@@ -133,27 +131,27 @@ function Footar() {
                     />
                   </p>
                 </NavLink>
-                <NavLink to={""}>
+                <NavLink to={"/rent-car"}>
                   <p className="font-normal w-fit text-base text-[#FFFFFF] relative hover:text-brand transition-all duration-300 after:absolute after:-bottom-1 after:transition-all after:duration-300 hover:after:h-0.5 after:w-full after:start-0 after:bg-brand ">
                     Rent Car
                   </p>
                 </NavLink>
-                <NavLink to={""}>
+                <NavLink to={"/about"}>
                   <p className="font-normal w-fit text-base text-[#FFFFFF] relative hover:text-brand transition-all duration-300 after:absolute after:-bottom-1 after:transition-all after:duration-300 hover:after:h-0.5 after:w-full after:start-0 after:bg-brand ">
                     About Us
                   </p>
                 </NavLink>
-                <NavLink to={""}>
+                <NavLink to={"/contact-us"}>
                   <p className="font-normal w-fit text-base text-[#FFFFFF] relative hover:text-brand transition-all duration-300 after:absolute after:-bottom-1 after:transition-all after:duration-300 hover:after:h-0.5 after:w-full after:start-0 after:bg-brand ">
                     Contact Us
                   </p>
                 </NavLink>
-                <NavLink to={""}>
+                <NavLink to={"/blogs"}>
                   <p className="font-normal w-fit text-base text-[#FFFFFF] relative hover:text-brand transition-all duration-300 after:absolute after:-bottom-1 after:transition-all after:duration-300 hover:after:h-0.5 after:w-full after:start-0 after:bg-brand ">
                     Blogs
                   </p>
                 </NavLink>
-                <NavLink to={""}>
+                <NavLink to={"/all-frequently-asked"}>
                   <p className="font-normal w-fit text-base text-[#FFFFFF] relative hover:text-brand transition-all duration-300 after:absolute after:-bottom-1 after:transition-all after:duration-300 hover:after:h-0.5 after:w-full after:start-0 after:bg-brand ">
                     FAQs
                   </p>
