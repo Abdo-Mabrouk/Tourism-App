@@ -22,6 +22,7 @@ import {
   faCartShopping,
 } from "@fortawesome/free-solid-svg-icons";
 import logo from "@/assets/icon/logo.svg";
+import usd from "@/assets/icon/global.svg";
 import { Link, NavLink } from "react-router-dom";
 import SelectLang from "@/paga/Auth/components/SelectLang";
 
@@ -125,7 +126,7 @@ export default function Navbar() {
             <AlertDialogTrigger asChild>
               <div className=" py-2 px-4 w-fit rounded-full text-[#1D1F1F] transition-colors duration-300 cursor-pointer hover:bg-black hover:text-white flex items-center justify-center gap-2">
                 <img
-                  src="/src/assets/icon/global.svg"
+                  src={usd}
                   alt="icon"
                   className="size-5"
                 />

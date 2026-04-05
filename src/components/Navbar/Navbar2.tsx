@@ -24,6 +24,7 @@ import {
   faGlobe,
 } from "@fortawesome/free-solid-svg-icons";
 import logo from "@/assets/icon/logo.svg";
+import usd from "@/assets/icon/global.svg";
 import { Link, NavLink } from "react-router-dom";
 import SelectLang from "@/paga/Auth/components/SelectLang";
 
@@ -172,7 +173,7 @@ export default function Navbar2() {
                     <div className="">
                       <AlertDialogCancel className="size-11! cursor-pointer p-0! rounded-full! border border-[#EEEEEE]">
                         <img
-                          src="/src/assets/icon/close.svg"
+                          src={usd}
                           className="size-7!"
                           alt=""
                         />
