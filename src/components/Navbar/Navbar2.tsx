@@ -24,9 +24,11 @@ import {
   faGlobe,
 } from "@fortawesome/free-solid-svg-icons";
 import logo from "@/assets/icon/logo.svg";
+import USD from "@/assets/icon/global.svg";
 import usd from "@/assets/icon/global.svg";
 import { Link, NavLink } from "react-router-dom";
 import SelectLang from "@/paga/Auth/components/SelectLang";
+import { useState } from "react";
 
 const ORANGE = "#F7941D";
 
@@ -39,7 +41,10 @@ function desktopNavLinkClass({ isActive }: { isActive: boolean }) {
 }
 
 export default function Navbar2() {
-
+  const [open,setOpen]=useState<boolean>(false)
+  function togel() {
+    setOpen(!open)
+  }
   const bottomLinks = (
     <>
       <NavLink to="/" className={desktopNavLinkClass}>
@@ -138,7 +143,7 @@ export default function Navbar2() {
             <img
               src={logo}
               alt="Sun Pyramids Tours"
-              className="h-9 w-auto sm:h-10"
+              className="h-9 w-30 lg:w-auto sm:h-10"
             />
           </NavLink>
           <div className="hidden lg:flex flex-1 justify-center px-6 max-w-2xl mx-auto">
@@ -152,47 +157,47 @@ export default function Navbar2() {
             </div>
           </div>
           <div className="flex items-center gap-2 shrink-0">
-          <AlertDialog>
-            <AlertDialogTrigger asChild>
-              <div className=" py-2 px-4 w-fit rounded-full text-[#1D1F1F] transition-colors duration-300 cursor-pointer hover:bg-black hover:text-white flex items-center justify-center gap-2">
-                <img
-                  src="/src/assets/icon/global.svg"
-                  alt="icon"
-                  className="size-5"
-                />
-                <p className=" text-base font-medium ">- USD</p>
-              </div>
-            </AlertDialogTrigger>
-            <AlertDialogContent className="bg-white rounded-3xl border-0">
-              <AlertDialogHeader>
-                <AlertDialogTitle className="w-full">
-                  <div className="flex items-center justify-between w-full">
-                    <p className="text-[#1D1F1F] font-medium text-xl">
-                      Language and Currency
-                    </p>
-                    <div className="">
-                      <AlertDialogCancel className="size-11! cursor-pointer p-0! rounded-full! border border-[#EEEEEE]">
-                        <img
-                          src={usd}
-                          className="size-7!"
-                          alt=""
-                        />
-                      </AlertDialogCancel>
+            <AlertDialog>
+              <AlertDialogTrigger asChild>
+                <div className=" hidden py-2 px-4 w-fit rounded-full text-[#1D1F1F] transition-colors duration-300 cursor-pointer hover:bg-black hover:text-white lg:flex items-center justify-center gap-2">
+                  <img src={USD} alt="icon" className="size-5" />
+                  <p className=" text-base font-medium ">- USD</p>
+                </div>
+              </AlertDialogTrigger>
+              <AlertDialogContent className="bg-white rounded-3xl border-0">
+                <AlertDialogHeader>
+                  <AlertDialogTitle className="w-full">
+                    <div className="flex items-center justify-between w-full">
+                      <p className="text-[#1D1F1F] font-medium text-xl">
+                        Language and Currency
+                      </p>
+                      <div className="">
+                        <AlertDialogCancel className="size-11! cursor-pointer p-0! rounded-full! border border-[#EEEEEE]">
+                          <img src={usd} className="size-7!" alt="" />
+                        </AlertDialogCancel>
+                      </div>
                     </div>
-                  </div>
-                </AlertDialogTitle>
-                <AlertDialogDescription className=" w-full!">
-                  <SelectLang />
-                </AlertDialogDescription>
-              </AlertDialogHeader>
-            </AlertDialogContent>
-          </AlertDialog>
+                  </AlertDialogTitle>
+                  <AlertDialogDescription className=" w-full!">
+                    <SelectLang />
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+              </AlertDialogContent>
+            </AlertDialog>
 
             <Link to={"/cart"}>
               <div className="border border-[#D1D5DB] rounded-full size-10 flex items-center justify-center text-[#1D1F1F] cursor-pointer hover:bg-gray-50 transition-colors">
                 <FontAwesomeIcon icon={faCartShopping} />
               </div>
             </Link>
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={togel}
+              className="border-[#D1D5DB] shadow-none text-[#1D1F1F] size-10"
+            >
+              <Menu className="size-5" />
+            </Button>
             <NavLink
               to="/auth/login"
               className="hidden sm:inline-flex rounded-full border border-[#D1D5DB] bg-white px-4 py-2 text-sm font-medium text-[#1D1F1F] hover:bg-gray-50 transition-colors"
@@ -202,22 +207,9 @@ export default function Navbar2() {
           </div>
         </div>
         {/* link of pages */}
-        <Sheet>
-          <SheetTrigger asChild>
-            <div className="flex items-center gap-2 lg:hidden">
-              <div className="border border-[#D1D5DB] rounded-full size-10 flex items-center justify-center text-[#1D1F1F]">
-                <FontAwesomeIcon icon={faCartShopping} />
-              </div>
-              <Button
-                variant="outline"
-                size="icon"
-                className="border-[#D1D5DB] shadow-none text-[#1D1F1F] size-10"
-              >
-                <Menu className="size-5" />
-              </Button>
-            </div>
-          </SheetTrigger>
-          <SheetContent side="left" className="p-6 space-y-6 bg-white">
+        {open&&<>
+          <Sheet>
+          <div className="p-6 space-y-6 bg-white">
             <div className="relative w-full max-w-xl">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#9CA3AF] pointer-events-none" />
               <input
@@ -359,8 +351,9 @@ export default function Navbar2() {
                 Make Your Trip
               </NavLink>
             </div>
-          </SheetContent>
+          </div>
         </Sheet>
+        </>}
         {/* Bottom row: main links + CTA (desktop) */}
         <div className="hidden lg:flex items-center justify-between pb-3 pt-0">
           <div className="flex flex-wrap items-center gap-x-1 gap-y-1">

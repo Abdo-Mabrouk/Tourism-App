@@ -8,7 +8,7 @@ import NileCruisesTap from "./NileCruisesTap";
 import ShoreExcursionsTap from "./ShoreExcursionsTap";
 export default function PopularDestination() {
   return (
-    <div className="pt-16 bg-[#F9FAFB]">
+    <div className="pt-16 bg-[#F9FAFB]  ">
       <SectionContainer
         title="Popular Destination"
         decs="Many very Exciting places for you to visit for the next trip"
@@ -22,7 +22,7 @@ export default function PopularDestination() {
             { id: 5, title: "Shore Excursions", element: <ShoreExcursionsTap/>},
           ]}
           TabsClassName={"gap-8!"}
-          TabsListClassName={"h-fit! bg-[#EEEEEE] mx-auto! rounded-full p-0! "}
+          TabsListClassName={" w-full! overflow-x-scroll! lg:overflow-visible! lg:w-fit! lg:no-scrollbar! h-fit! bg-[#EEEEEE] mx-auto! rounded-full! p-0! "}
           TabsTriggerClassName={"text-[16px]! font-medium! data-[state=active]:bg-[#143485] data-[state=active]:text-white data-[state=active]:rounded-full gap-3 py-2! px-6! "}
         />
         <FooterContainer href="/see-more-popular-destination" />

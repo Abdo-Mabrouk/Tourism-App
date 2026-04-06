@@ -30,7 +30,7 @@ export default function HeroSection() {
                     key={card.id}
                     className="py-6 px-2 border border-[#EEEEEE] rounded-3xl bg-[#EEEEEE] flex flex-col items-center gap-2 group hover:bg-white hover:shadow-lg transition-colors duration-300"
                   >
-                    <p className="font-bold text-[#1D1F1F] text-[28px] lg:text-[34px] group-hover:text-brand transition-colors duration-300">
+                    <p className="font-bold text-[#1D1F1F] text-[20px] lg:text-[34px] group-hover:text-brand transition-colors duration-300">
                       {card.number}
                     </p>
                     <p className="font-medium text-[#A5A5A5] text-[10px] lg:text-base group-hover:text-black transition-colors duration-300">

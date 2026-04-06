@@ -9,6 +9,9 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import SelectLang from "../components/SelectLang";
+import sud from '@/assets/icon/global.svg'
+import closeIcon from '@/assets/icon/close.svg'
+import img1 from '@/assets/nnnnnn.svg'
 
 function NestedAuthPaga() {
   return (
@@ -18,7 +21,7 @@ function NestedAuthPaga() {
           <AlertDialogTrigger asChild>
             <div className="border py-2 px-4 w-fit rounded-full text-[#1D1F1F] transition-colors duration-300 cursor-pointer hover:bg-black hover:text-white border-[#EEEEEE] flex items-center justify-center gap-2">
               <img
-                src="/src/assets/icon/global.svg"
+                src={sud}
                 alt="icon"
                 className="size-5"
               />
@@ -35,7 +38,7 @@ function NestedAuthPaga() {
                   <div className="">
                     <AlertDialogCancel className="size-11! cursor-pointer p-0! rounded-full! border border-[#EEEEEE]">
                       <img
-                        src="/src/assets/icon/close.svg"
+                        src={closeIcon}
                         className="size-7!"
                         alt=""
                       />
@@ -54,7 +57,7 @@ function NestedAuthPaga() {
       </div>
       <div className=" hidden lg:block overflow-hidden rounded-4xl max-h-160 ">
         <img
-          src="/src/assets/nnnnnn.svg"
+          src={img1}
           alt=""
           className="w-full h-full object-cover"
         />

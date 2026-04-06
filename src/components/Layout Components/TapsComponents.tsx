@@ -28,9 +28,9 @@ export default function TapsComponents({
   isReverse = false,
 }: TapsComponentsProps) {
   return (
-    <Tabs defaultValue={taps?.[0]?.title} className={TabsClassName}>
+    <Tabs defaultValue={taps?.[0]?.title} className={` ${TabsClassName}`}>
       <TabsList className={` ${TabsListClassName}`}>
-        <div className="w-full flex items-center gap-4 ">
+        <div className="w-full flex items-center gap-4  ">
           {taps.map((tab) => (
             <TabsTrigger
               key={tab.id}

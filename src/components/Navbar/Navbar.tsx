@@ -31,7 +31,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full z-50 py-4 bg-white">
       <div className="container flex items-center justify-between">
         <div>
-          <img src={logo} alt="" className="w-57.5 h-auto" />
+          <img src={logo} alt="" className=" w-30 lg:w-57.5 h-auto" />
         </div>
 
         <div className="hidden lg:flex gap-2 items-center">
