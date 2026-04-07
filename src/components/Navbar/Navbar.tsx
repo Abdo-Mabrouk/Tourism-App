@@ -163,9 +163,12 @@ export default function Navbar() {
         <Sheet>
           <SheetTrigger asChild>
             <div className="flex items-center gap-2 lg:hidden">
-              <div className="border border-[#EEEEEE] rounded-full size-11 flex items-center justify-center text-[#1D1F1F]">
-                <FontAwesomeIcon icon={faCartShopping} />
-              </div>
+              <Link to={"/cart"}>
+                <div className="border border-[#EEEEEE] rounded-full size-11 flex items-center justify-center text-[#1D1F1F]">
+                  <FontAwesomeIcon icon={faCartShopping} />
+                </div>
+              </Link>
+
               <div className="border border-[#EEEEEE] rounded-full size-11 flex items-center justify-center">
                 <Button
                   variant="outline"
