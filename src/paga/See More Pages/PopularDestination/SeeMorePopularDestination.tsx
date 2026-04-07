@@ -15,7 +15,7 @@ export default function SeeMorePopularDestination() {
   const [perPage, setPerPage] = useState(10);
 
   return (
-    <div className="pt-34  ">
+    <div className="pt-15 lg:pt-34  ">
       <CustomBreadcrumb
         items={[{ name: "Home", href: "/" }, { name: "Tours" }]}
       />
@@ -45,7 +45,7 @@ export default function SeeMorePopularDestination() {
                   icon: icon,
                   title: "Price",
                   element: (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
                       {data.map((card) => (
                         <PopularCard key={card.id} cardData={card} />
                       ))}
@@ -72,7 +72,7 @@ export default function SeeMorePopularDestination() {
                 },
               ]}
               TabsClassName={"gap-8!"}
-              TabsListClassName={"h-fit! me-auto!  p-0! "}
+              TabsListClassName={"h-fit! me-auto!  w-full! overflow-x-scroll! lg:overflow-visible!  p-0! "}
               TabsTriggerClassName={
                 "text-[14px]! bg-[#E9EEFC] cursor-pointer text-[#163A96] rounded-full font-normal! gap-3 py-2! px-1.5! data-[state=active]:bg-transparent data-[state=active]:text-[#163A96] data-[state=active]:px-6! data-[state=active]:py-3! data-[state=active]:border data-[state=active]:border-[#163A96] data-[state=active]:mb-3 "
               }

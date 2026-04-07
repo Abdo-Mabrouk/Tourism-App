@@ -1,18 +1,19 @@
-import icon1 from '@/assets/icon/eye.svg';
+import icon1 from "@/assets/icon/eye.svg";
+import closeIcon from "@/assets/icon/close.svg";
 import {
   AlertDialog,
   AlertDialogCancel,
   AlertDialogContent,
   AlertDialogHeader,
   AlertDialogTrigger,
-} from "@/components/ui/alert-dialog"
+} from "@/components/ui/alert-dialog";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import ViewDestinationsContent from './ViewDestinationsContent';
+import ViewDestinationsContent from "./ViewDestinationsContent";
 export default function HighlightsContant() {
   const dataAsked = [
     {
@@ -28,17 +29,19 @@ export default function HighlightsContant() {
     {
       id: 3,
       trigger: "Aswan Attractions",
-      ans:<>
-      <div className="px-5">
-        <ol className=' list-disc'>
-          <li>Aswan High Dam</li>
-          <li>Philae Temple</li>
-          <li>Unfinished Obelisk</li>
-          <li>Edfu Temple</li>
-          <li>Kom Ombo Temple</li>
-        </ol>
-      </div>
-      </>
+      ans: (
+        <>
+          <div className="px-5">
+            <ol className=" list-disc">
+              <li>Aswan High Dam</li>
+              <li>Philae Temple</li>
+              <li>Unfinished Obelisk</li>
+              <li>Edfu Temple</li>
+              <li>Kom Ombo Temple</li>
+            </ol>
+          </div>
+        </>
+      ),
     },
   ];
   return (
@@ -50,44 +53,46 @@ export default function HighlightsContant() {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
-        
-        <AlertDialog >
-  <AlertDialogTrigger asChild>
-  <button className=" rounded-4xl font-medium text-base absolute top-2 cursor-pointer end-2 p-2 bg-brand text-white flex items-center justify-center gap-2 w-fit">
-          <img src={icon1} alt="View Destinations" className='size-5! ' />
-          View Destinations
-        </button>
+
+        <AlertDialog>
+          <AlertDialogTrigger asChild>
+            <button className=" rounded-4xl font-medium text-base absolute top-2 cursor-pointer end-2 p-2 bg-brand text-white flex items-center justify-center gap-2 w-fit">
+              <img src={icon1} alt="View Destinations" className="size-5! " />
+              View Destinations
+            </button>
           </AlertDialogTrigger>
-  <AlertDialogContent className='bg-white! border-0! p-6! max-w-[920px]! max-h-[95vh]! overflow-y-scroll! no-scrollbar rounded-4xl!'>
-    <AlertDialogHeader className='flex items-center justify-between w-full'>
-      <p className="text-[#1D1F1F] text-xl font-medium">View Destinations</p>
-      <AlertDialogCancel className='size-11! cursor-pointer p-0! rounded-full! border border-[#EEEEEE]'>
-        <img src="/src/assets/icon/close.svg" className='size-5!' alt="" />
-      </AlertDialogCancel>
-    </AlertDialogHeader>
-    <ViewDestinationsContent/>
-  </AlertDialogContent>
-</AlertDialog>
-<div className="">
-<Accordion type="single" collapsible className="space-y-4">
-              {dataAsked.map((item) => (
-                <>
-                  <AccordionItem
-                    value={`item-${item.id}`}
-                    key={item.id}
-                    className="bg-[#EEEEEE] rounded-2xl border border-[#F9FAFB]"
-                  >
-                    <AccordionTrigger className="text-sm lg:text-xl text-[#1D1F1F] px-4 font-medium hover:text-brand-blue hover:bg-brand-blue/20 transition-colors duration-300">
-                      {item.trigger}
-                    </AccordionTrigger>
-                    <AccordionContent className="p-4 bg-white m-2 rounded-b-2xl text-base font-normal text-[#666666]">
-                      {item.ans}
-                    </AccordionContent>
-                  </AccordionItem>
-                </>
-              ))}
-            </Accordion>
-</div>
+          <AlertDialogContent className="bg-white! border-0! p-6! max-w-[920px]! max-h-[95vh]! overflow-y-scroll! no-scrollbar rounded-4xl!">
+            <AlertDialogHeader className="flex items-center justify-between w-full">
+              <p className="text-[#1D1F1F] text-xl font-medium">
+                View Destinations
+              </p>
+              <AlertDialogCancel className="size-11! cursor-pointer p-0! rounded-full! border border-[#EEEEEE]">
+                <img src={closeIcon} className="size-5!" alt="" />
+              </AlertDialogCancel>
+            </AlertDialogHeader>
+            <ViewDestinationsContent />
+          </AlertDialogContent>
+        </AlertDialog>
+        <div className="">
+          <Accordion type="single" collapsible className="space-y-4">
+            {dataAsked.map((item) => (
+              <>
+                <AccordionItem
+                  value={`item-${item.id}`}
+                  key={item.id}
+                  className="bg-[#EEEEEE] rounded-2xl border border-[#F9FAFB]"
+                >
+                  <AccordionTrigger className="text-sm lg:text-xl text-[#1D1F1F] px-4 font-medium hover:text-brand-blue hover:bg-brand-blue/20 transition-colors duration-300">
+                    {item.trigger}
+                  </AccordionTrigger>
+                  <AccordionContent className="p-4 bg-white m-2 rounded-b-2xl text-base font-normal text-[#666666]">
+                    {item.ans}
+                  </AccordionContent>
+                </AccordionItem>
+              </>
+            ))}
+          </Accordion>
+        </div>
       </div>
     </div>
   );

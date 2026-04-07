@@ -2,12 +2,13 @@ import SectionContainer from "@/components/Layout Components/sectionContainer";
 import pattern1 from "@/assets/pattern1.svg";
 import pattern2 from "@/assets/pattern2.svg";
 import RadioInput from "@/components/inputs/RadioInput";
-import icon1 from "@/assets/icon/calendar.svg";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
+import CustomInput from "@/components/inputs/CustomInput";
 export default function MakeYourTrip() {
   const [selected, setSelected] = useState("cash");
+  const [value, setValue] = useState("");
+
   return (
     <div className=" container py-3 lg:py-16">
       <div className="flex flex-col gap-12 bg-[#F9FAFB] pt-3 lg:pt-10 lg:pb-14 rounded-[40px] relative overflow-hidden ">
@@ -49,29 +50,25 @@ export default function MakeYourTrip() {
                 />
               </div>
               <div className="flex flex-col lg:flex-row items-center gap-4">
-                <div className="py-4 px-8 border border-[#EEEEEE]  rounded-full flex items-center justify-between w-full ">
-                  <div className="flex flex-col items-start gap-4">
-                    <p className="font-normal text-[14px] text-[#444444]">
-                      From
-                    </p>
-                    <p className="font-medium text-[16px] text-[#1D1F1F]">
-                      02/09/2024
-                    </p>
-                  </div>
-                  <img src={icon1} alt="" className="size-6" />
-                </div>
-                <div className="py-4 px-8 border border-[#EEEEEE]  rounded-full flex items-center justify-between w-full ">
-                  <div className="flex flex-col items-start gap-4">
-                    <p className="font-normal text-[14px] text-[#444444]">To</p>
-                    <p className="font-medium text-[16px] text-[#A5A5A5]">
-                      Select the end date of the trip
-                    </p>
-                  </div>
-                  <img src={icon1} alt="" className="size-6" />
-                </div>
-                <Link  to={"/make-your-trip"} className="w-fit! block cursor-pointer">
-        <button className="font-medium text-base text-white bg-brand py-6 rounded-full lg:w-50! cursor-pointer">Make Trip</button>
-        </Link>
+                <CustomInput
+                  label="From"
+                  value={value}
+                  onChange={(e) => setValue(e.target.value)}
+                />
+                <CustomInput
+                  label="to"
+                  value={value}
+                  onChange={(e) => setValue(e.target.value)}
+                />
+
+                <Link
+                  to={"/make-your-trip"}
+                  className="w-fit! block cursor-pointer"
+                >
+                  <button className="font-medium text-base text-white bg-brand py-4 lg:py-6 rounded-full w-70 lg:w-50! cursor-pointer">
+                    Make Trip
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

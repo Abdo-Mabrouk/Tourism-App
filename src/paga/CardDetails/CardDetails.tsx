@@ -55,7 +55,7 @@ export default function CardDetails() {
     "Tickets to get inside the Pyramids",
   ];
   return (
-    <div className="pt-34 space-y-8">
+    <div className="pt-15 lg:pt-34 space-y-8">
       <CustomBreadcrumb
         items={[{ name: "Home", href: "/" }, { name: "Tours" }]}
       />

@@ -29,7 +29,7 @@ export default function OneDayTours() {
     { id: 9, name: "Marsa Alam ", img: img9 },
   ];
   return (
-    <div className="pt-33 bg-[#f2f2f2]">
+    <div className="pt-15 lg:pt-34 bg-[#f2f2f2]">
       <CustomBreadcrumb
           items={[
             { name: "Home", href: "/" },

@@ -113,7 +113,7 @@ export default function RentCar() {
   };
 
   return (
-    <div className="pb-10 pt-33 space-y-8 bg-[#f2f2f2] ">
+    <div className="pb-10 pt-15 lg:pt-34 space-y-8 bg-[#f2f2f2] ">
       <CustomBreadcrumb
           items={[
             { name: "Home", href: "/" },

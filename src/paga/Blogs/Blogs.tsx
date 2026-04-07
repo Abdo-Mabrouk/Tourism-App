@@ -91,8 +91,8 @@ export default function Blogs() {
           <p className="text-[#FFFFFF] text-3xl lg:text-5xl font-bold">Blogs</p>
         </div>
       </div>
-      <div className=" container py-7.5 space-y-5">
-        <div className="bg-[#F9FAFB] rounded-4xl p-8 flex items-center gap-4">
+      <div className=" container py-7.5 space-y-15">
+        <div className="bg-[#F9FAFB] rounded-4xl p-4 lg:p-8 flex flex-col lg:flex-row items-center gap-4">
           <InputWithIcon
             isRequired
             placeholder="What article are you looking for"
@@ -101,54 +101,56 @@ export default function Blogs() {
             icon={icon1}
             className=" rounded-full!"
           />
-          <button className="btn2 py-4">Search</button>
+          <button className="btn2 py-4 w-full lg:w-fit">Search</button>
         </div>
         <Tabs defaultValue={taps?.[0]?.title} className="gap-14!">
           <TabsList className=" flex items-center w-full justify-between!">
-            <div className="w-fit flex items-center gap-4">
+            <div className="w-full space-y-4">
               <p className="text-[#A5A5A5] text-base font-normal">
                 Popular tags :
               </p>
-              <div className="flex items-center gap-2">
-                {taps.map((tab) => (
-                  <TabsTrigger
-                    className="py-3! px-6! rounded-full border hover:bg-gray-200! data-[state=active]:bg-gray-200! cursor-pointer  border-[#EEEEEE]"
-                    key={tab.id}
-                    value={tab.title}
-                  >
-                    <p className="capitalize text-[#333333]! font-normal! text-sm!">{`${tab.title}`}</p>
-                  </TabsTrigger>
-                ))}
+              <div className="flex items-center justify-between gap-5 flex-col lg:flex-row w-full">
+                <div className="flex items-center gap-2 px-2 lg:px-0 w-full overflow-x-scroll">
+                  {taps.map((tab) => (
+                    <TabsTrigger
+                      className="py-3! px-6! rounded-full border hover:bg-gray-200! data-[state=active]:bg-gray-200! cursor-pointer  border-[#EEEEEE]"
+                      key={tab.id}
+                      value={tab.title}
+                    >
+                      <p className="capitalize text-[#333333]! font-normal! text-sm!">{`${tab.title}`}</p>
+                    </TabsTrigger>
+                  ))}
+                </div>
+                <div className="w-full lg:w-fit">
+                  <DropdownMenu >
+                    <DropdownMenuTrigger asChild className="w-full lg:w-fit">
+                      <Button
+                        variant="outline"
+                        className="text-[#1D1F1F] font-medium text-base border-[#EEEEEE]! py-3! cursor-pointer rounded-full! px-5!"
+                      >
+                        Sort by
+                        <img src={icon2} alt="" />
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent className="bg-white border-[#EEEEEE]!">
+                      <DropdownMenuGroup className="space-y-2!">
+                        <DropdownMenuItem className="hover:bg-gray-200!">
+                          Day Tours
+                        </DropdownMenuItem>
+                        <DropdownMenuItem className="hover:bg-gray-200!">
+                          Half Day Tour
+                        </DropdownMenuItem>
+                        <DropdownMenuItem className="hover:bg-gray-200!">
+                          Night Tours
+                        </DropdownMenuItem>
+                        <DropdownMenuItem className="hover:bg-gray-200!">
+                          Layover
+                        </DropdownMenuItem>
+                      </DropdownMenuGroup>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </div>
               </div>
-            </div>
-            <div className="">
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button
-                    variant="outline"
-                    className="text-[#1D1F1F] font-medium text-base border-[#EEEEEE]! py-3! cursor-pointer rounded-full! px-5!"
-                  >
-                    Sort by
-                    <img src={icon2} alt="" />
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="bg-white border-[#EEEEEE]!">
-                  <DropdownMenuGroup className="space-y-2!">
-                    <DropdownMenuItem className="hover:bg-gray-200!">
-                      Day Tours
-                    </DropdownMenuItem>
-                    <DropdownMenuItem className="hover:bg-gray-200!">
-                      Half Day Tour
-                    </DropdownMenuItem>
-                    <DropdownMenuItem className="hover:bg-gray-200!">
-                      Night Tours
-                    </DropdownMenuItem>
-                    <DropdownMenuItem className="hover:bg-gray-200!">
-                      Layover
-                    </DropdownMenuItem>
-                  </DropdownMenuGroup>
-                </DropdownMenuContent>
-              </DropdownMenu>
             </div>
           </TabsList>
           {taps.map((tab) => (

@@ -11,7 +11,7 @@ export default function OverviewContant() {
   ];
   return (
     <div className="space-y-4">
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
         {dataCard1.map((card1) => (
           <>
             <div className="py-6 border border-[#DEDEDE] rounded-2xl flex flex-col gap-3 items-center justify-center">
