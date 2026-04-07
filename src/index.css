@@ -14,8 +14,9 @@
 body {
     text-transform: capitalize;
     background: white;
-    width: 100%;
+    width: 100% !important;
     overflow-x: hidden;
+    max-width: 100% !important;
 }
 
 @layer components {

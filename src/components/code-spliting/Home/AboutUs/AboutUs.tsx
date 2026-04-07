@@ -102,8 +102,8 @@ export default function AboutUs() {
           ))}
         </Swiper>
       </SectionContainer>
-      <div className="w-full flex items-center justify-center">
-        <p className="text-[#A5A5A5] text-xl font-medium flex items-center gap-3">
+      <div className="w-full flex  items-center justify-center">
+        <p className="text-[#A5A5A5] text-xl flex-col lg:flex-row font-medium flex items-center gap-3">
           <span>View our tours on</span>
           <span className="text-[#000000] text-3xl font-bold flex items-center gap-3">
             <img src={icondev} alt="" />
