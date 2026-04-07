@@ -129,7 +129,7 @@ export default function Navbar2() {
         }
         style={{ color: ORANGE }}
       >
-        <img src={icon} alt="" className="size-5!" /> Special offer
+        <img src={icon} alt="" className="size-5! object-cover" /> Special offer
       </NavLink>
     </>
   );
